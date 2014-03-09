@@ -1,0 +1,27 @@
+{
+  "name": "updatehammer",
+  "version": "0.0.0",
+  "description": "Forcefully update all dependencies to latest versions and save to package.json",
+  "main": "index.js",
+  "bin": {
+    "updatehammer": "./index.js"
+  },
+  "scripts": {
+    "test": "test/test.sh"
+  },
+  "author": "Raine Lourie",
+  "license": "ISC",
+  "dependencies": {
+    "nativity-fomatto": "^1.0.0",
+    "async": "^0.2.10"
+  },
+  "devDependencies": {
+    "gulp-util": "^2.2.14",
+    "gulp-coffee": "^1.4.1",
+    "gulp": "^3.5.5",
+    "coffee-script": "^1.7.1",
+    "chai": "^1.9.0",
+    "gulp-clean": "^0.2.4"
+  },
+  "repository": "git@github.com:metaraine/updatehammer.git"
+}
