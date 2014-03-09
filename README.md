@@ -36,7 +36,7 @@ Run the updatehammer:
 
 	Successfully installed ansi-styles, moment
 
-Now our package.json looks like this:
+Now all our dependencies are at the latest:
 
 	{
 	  "dependencies": {
