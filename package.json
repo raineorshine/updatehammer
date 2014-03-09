@@ -1,6 +1,6 @@
 {
   "name": "updatehammer",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Forcefully update all dependencies to latest versions and save to package.json",
   "main": "index.js",
   "bin": {
