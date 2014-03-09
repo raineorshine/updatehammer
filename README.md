@@ -10,7 +10,8 @@ Forcefully update all dependencies to latest versions and save to package.json
 
 ### Example
 
-	Start with some out-of-date packages:
+Start with some out-of-date packages:
+
 	{
 	  "dependencies": {
 	    "ansi-styles": "^0.1.2",
@@ -18,11 +19,15 @@ Forcefully update all dependencies to latest versions and save to package.json
 	  }
 	}
 
+
 	Package      Current  Wanted  Latest  Location
 	ansi-styles    0.1.2   0.1.2   1.0.0  ansi-styles
 	moment         1.7.2   1.7.2   2.5.1  moment
 
-	Running the updatehammer...
+Run the updatehammer:
+
+	$ updatehammer
+
 	npm install ansi-styles@latest --save
 	ansi-styles@1.0.0 node_modules/ansi-styles
 
@@ -31,7 +36,8 @@ Forcefully update all dependencies to latest versions and save to package.json
 
 	Successfully installed ansi-styles, moment
 
-	Now our packages looks like this:
+Now our package.json looks like this:
+
 	{
 	  "dependencies": {
 	    "ansi-styles": "^1.0.0",
