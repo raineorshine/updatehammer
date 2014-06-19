@@ -12,8 +12,10 @@
   "author": "Raine Lourie",
   "license": "ISC",
   "dependencies": {
-    "nativity-fomatto": "^1.0.0",
-    "async": "^0.2.10"
+    "async": "^0.2.10",
+    "cint": "^6.1.0",
+    "commander": "^2.2.0",
+    "nativity-fomatto": "^1.0.0"
   },
   "devDependencies": {
     "gulp-util": "^2.2.14",

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 (function() {
-  var async, deps, devDeps, exec, fomatto, pkg, saveLatest;
+  var async, cint, com, deps, devDeps, exec, filterDeps, fomatto, pkg, saveLatest;
 
   exec = require('child_process').exec;
 
@@ -8,8 +8,12 @@
 
   fomatto = require('nativity-fomatto').install();
 
-  saveLatest = function(deps, options) {
-    return async.series(deps.map(function(dep) {
+  com = require('commander');
+
+  cint = require('cint');
+
+  saveLatest = function(depList, depFilter, options) {
+    return async.series(depList.map(function(dep) {
       return function(cb) {
         var command;
         command = 'npm install {}@latest {}'.format(dep, options);
@@ -24,16 +28,24 @@
       if (err) {
         return console.error('exec error: ', err);
       } else {
-        return console.log('Successfully installed', deps.join(', '));
+        return console.log('Successfully installed', depList.join(', '));
       }
+    });
+  };
+
+  com.option('-n, --filterName [expression]', 'Only update dependencies whose name matches the given regex', '.').option('-r, --filterVersion [expression]', 'Only update dependencies whose version matches the given regex', '.').parse(process.argv);
+
+  filterDeps = function(deps, regex) {
+    return cint.filterObject(deps, function(name, version) {
+      return (new RegExp(com.filterName).test(name)) && (new RegExp(com.filterVersion).test(version));
     });
   };
 
   pkg = require(process.cwd() + '/package.json');
 
-  deps = Object.keys(pkg.dependencies);
+  deps = Object.keys(filterDeps(pkg.dependencies));
 
-  devDeps = Object.keys(pkg.devDependencies);
+  devDeps = Object.keys(filterDeps(pkg.devDependencies));
 
   saveLatest(deps, '--save');
 

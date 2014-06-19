@@ -44,3 +44,14 @@ Now all our dependencies are at the latest:
 	    "moment": "^2.5.1"
 	  }
 	}
+
+### Advanced Usage
+
+Only update packages whose name matches the given regular expression
+
+	# updatehammer -n ^gulp-
+
+Only update packages whose version matches the given regular expression
+
+	# updatehammer -r ^[~^]
+
