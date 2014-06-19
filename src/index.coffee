@@ -32,8 +32,8 @@ filterDeps = (deps, regex)->
 
 # must require package.json relative to cwd, otherwise it will always require updatehammer's package.json!
 pkg = require(process.cwd() + '/package.json')
-deps = Object.keys filterDeps pkg.dependencies
-devDeps = Object.keys filterDeps pkg.devDependencies
+deps = Object.keys filterDeps pkg.dependencies or {}
+devDeps = Object.keys filterDeps pkg.devDependencies or {}
 
 # console.log pkg.dependencies, deps
 # console.log pkg.devDependencies, devDeps

@@ -43,9 +43,9 @@
 
   pkg = require(process.cwd() + '/package.json');
 
-  deps = Object.keys(filterDeps(pkg.dependencies));
+  deps = Object.keys(filterDeps(pkg.dependencies || {}));
 
-  devDeps = Object.keys(filterDeps(pkg.devDependencies));
+  devDeps = Object.keys(filterDeps(pkg.devDependencies || {}));
 
   saveLatest(deps, '--save');
 
