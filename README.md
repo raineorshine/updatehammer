@@ -49,9 +49,9 @@ Now all our dependencies are at the latest:
 
 Only update packages whose name matches the given regular expression
 
-	# updatehammer -n ^gulp-
+	$ updatehammer -n ^gulp-
 
 Only update packages whose version matches the given regular expression
 
-	# updatehammer -r ^[~^]
+	$ updatehammer -r ^[~^]
 
