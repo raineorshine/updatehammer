@@ -12,7 +12,7 @@
 
   cint = require('cint');
 
-  saveLatest = function(depList, depFilter, options) {
+  saveLatest = function(depList, options) {
     return async.series(depList.map(function(dep) {
       return function(cb) {
         var command;

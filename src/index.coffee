@@ -4,7 +4,7 @@ fomatto = require('nativity-fomatto').install()
 com = require 'commander'
 cint = require 'cint'
 
-saveLatest = (depList, depFilter, options)->
+saveLatest = (depList, options)->
 	async.series depList.map((dep)->
 		(cb)->
 			command = 'npm install {}@latest {}'.format(dep, options)
