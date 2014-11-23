@@ -1,8 +1,8 @@
-exec = require('child_process').exec
-async = require('async')
+exec =    require('child_process').exec
+async =   require('async')
 fomatto = require('nativity-fomatto').install()
-com = require 'commander'
-cint = require 'cint'
+com =     require('commander')
+cint =    require('cint')
 
 saveLatest = (depList, options)->
 	async.series depList.map((dep)->
