@@ -1,3 +1,9 @@
+# DEPRECATED: Please use [npm-check-updates](https://github.com/tjunnone/npm-check-updates)
+
+I am now a collaborator on npm-check-updates, which has been updated to include all of updatehammer's functionality.
+
+---
+
 Forcefully update all dependencies to latest versions and save to package.json
 
 ## Install
