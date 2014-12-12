@@ -1,5 +1,4 @@
-# DEPRECATED
-# Please use [npm-check-updates](https://github.com/tjunnone/npm-check-updates)
+# DEPRECATED: Please use [npm-check-updates](https://github.com/tjunnone/npm-check-updates)
 
 I am now a collaborator on npm-check-updates, which has been updated to include all of updatehammer's functionality.
 
